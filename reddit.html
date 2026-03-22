@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LinkRush Download</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    window.onload = function () {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      
+      const IOS_URL = "https://apps.apple.com/app/apple-store/id6758081227?pt=128437553&ct=reddit&mt=8";
+      const ANDROID_URL = "https://play.google.com/store/apps/details?id=com.linkrush.korean&referrer=utm_source=reddit";
+      const FALLBACK_URL = "https://play.google.com/store/apps/details?id=com.linkrush.korean&referrer=utm_source=reddit";
+
+      if (/iPad|iPhone|iPod/.test(ua)) {
+        window.location.replace(IOS_URL);
+      } else if (/Android/.test(ua)) {
+        window.location.replace(ANDROID_URL);
+      } else {
+        window.location.replace(FALLBACK_URL);
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <p>Redirecting…</p>
+</body>
+</html>
